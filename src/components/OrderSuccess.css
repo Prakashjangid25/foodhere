@@ -1,0 +1,125 @@
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: radial-gradient(ellipse at 50% 40%, rgba(207, 168, 88, 0.06) 0%, transparent 60%),
+              var(--bg-dark);
+}
+
+.success-card {
+  background: var(--bg-card);
+  padding: 55px 45px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+.success-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+}
+
+.success-title {
+  font-size: 2rem;
+  margin: 22px 0;
+  color: var(--accent-gold);
+  text-shadow: 0 2px 10px rgba(207, 168, 88, 0.25);
+}
+
+.success-msg {
+  color: var(--text-main);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.success-details {
+  color: var(--text-muted);
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.success-details strong {
+  color: var(--text-main);
+}
+
+.new-order-btn {
+  background: transparent;
+  color: var(--accent-gold);
+  border: 1px solid rgba(207, 168, 88, 0.3);
+  padding: 14px 35px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.9rem;
+}
+
+.new-order-btn:hover {
+  background: var(--accent-gold);
+  color: var(--bg-dark);
+  box-shadow: 0 4px 20px rgba(207, 168, 88, 0.3);
+}
+
+/* Checkmark Animation */
+.checkmark {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: var(--accent-gold);
+  stroke-miterlimit: 10;
+  margin: 0 auto;
+  box-shadow: inset 0px 0px 0px var(--accent-gold);
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: var(--accent-gold);
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px transparent;
+  }
+}

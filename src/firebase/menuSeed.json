@@ -1,0 +1,319 @@
+[
+  {
+    "id": "cat_starters",
+    "name": "Aperitifs & Starters",
+    "items": [
+      {
+        "id": "s4",
+        "name": "Paneer Tikka Skewers",
+        "description": "Charcoal-grilled cottage cheese marinated in spiced yogurt.",
+        "price": 1280,
+        "image": "https://images.pexels.com/photos/5410400/pexels-photo-5410400.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "s5",
+        "name": "Lobster Croquettes",
+        "description": "Crispy lobster-filled potato bites with a saffron rouille.",
+        "price": 1760,
+        "image": "https://images.pexels.com/photos/3655916/pexels-photo-3655916.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "s7",
+        "name": "Burrata & Prosciutto",
+        "description": "Creamy burrata wrapping San Daniele prosciutto with balsamic glaze.",
+        "price": 1920,
+        "image": "https://images.pexels.com/photos/5638527/pexels-photo-5638527.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "s8",
+        "name": "Chicken 65",
+        "description": "South Indian style spicy deep-fried chicken morsels.",
+        "price": 1440,
+        "image": "https://images.pexels.com/photos/60616/fried-chicken-chicken-fried-crunchy-60616.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "s9",
+        "name": "Harissa Spiced Wings",
+        "description": "Oven-roasted chicken wings tossed in North African harissa.",
+        "price": 1520,
+        "image": "https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=600"
+      }
+    ]
+  },
+  {
+    "id": "cat_asian_indian",
+    "name": "Asian & Indian Signatures",
+    "items": [
+      {
+        "id": "ai1",
+        "name": "Gourmet Masala Dosa",
+        "description": "Golden crispy crepe crafted from fermented lentil batter, with spiced potato mash and artisanal chutneys.",
+        "price": 1280,
+        "image": "https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ai2",
+        "name": "Crispy Veg Manchurian",
+        "description": "Wok-tossed vegetable dumplings in a dark soy and burnt garlic sauce, an Indo-Chinese classic.",
+        "price": 1440,
+        "image": "https://images.pexels.com/photos/2116094/pexels-photo-2116094.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ai3",
+        "name": "Gobi Manchurian Dry",
+        "description": "Crispy cauliflower florets glazed in spicy-sweet and tangy Manchurian sauce.",
+        "price": 1360,
+        "image": "https://images.pexels.com/photos/12737656/pexels-photo-12737656.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ai4",
+        "name": "Chili Paneer",
+        "description": "Cottage cheese cubes wok-tossed with peppers, onions, and spicy dark soy sauce.",
+        "price": 1520,
+        "image": "https://images.pexels.com/photos/9609835/pexels-photo-9609835.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ai5",
+        "name": "Hakka Noodles",
+        "description": "Silky stir-fried noodles with julienned vegetables and a hint of sesame oil.",
+        "price": 1200,
+        "image": "https://images.pexels.com/photos/2456435/pexels-photo-2456435.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ai6",
+        "name": "Paneer Butter Masala",
+        "description": "Soft cottage cheese simmered in a rich tomato, cashew, and fenugreek gravy. Served with Naan.",
+        "price": 1920,
+        "image": "https://images.pexels.com/photos/9609838/pexels-photo-9609838.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ai7",
+        "name": "Murg Makhani (Butter Chicken)",
+        "description": "Tandoor-roasted chicken tikka in a velvet-smooth smoked tomato sauce.",
+        "price": 2080,
+        "image": "https://images.pexels.com/photos/7625056/pexels-photo-7625056.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ai9",
+        "name": "Schezwan Fried Rice",
+        "description": "Wok-tossed fiery rice with crunchy greens and spicy szechuan pepper.",
+        "price": 1280,
+        "image": "https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ai10",
+        "name": "Cheese Burst Dosa",
+        "description": "Crispy Dosa infused with melted mozzarella and mildly spiced gunpowder.",
+        "price": 1520,
+        "image": "https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg?auto=compress&cs=tinysrgb&w=600"
+      }
+    ]
+  },
+  {
+    "id": "cat_fast_food",
+    "name": "Fast Food & Comfort",
+    "items": [
+      {
+        "id": "ff1",
+        "name": "Wagyu Truffle Burger",
+        "description": "Prime Wagyu patty, aged cheddar, caramelized onions, and truffle mayo on a brioche bun.",
+        "price": 2560,
+        "image": "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ff2",
+        "name": "Gourmet Margherita Pizza",
+        "description": "Wood-fired sourdough base with San Marzano tomatoes, fresh mozzarella, and basil.",
+        "price": 1920,
+        "image": "https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ff3",
+        "name": "Truffle Parmesan Fries",
+        "description": "Crispy thick-cut fries tossed in white truffle oil, parsley, and parmesan snow.",
+        "price": 1120,
+        "image": "https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ff4",
+        "name": "Club Sandwich Supreme",
+        "description": "Triple-decker with roasted turkey, crisp bacon, avocado, and herb aioli.",
+        "price": 1600,
+        "image": "https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ff5",
+        "name": "Loaded Mexican Nachos",
+        "description": "Crisp tortilla chips baked with jalapeños, queso fresco, guacamole, and sour cream.",
+        "price": 1440,
+        "image": "https://images.pexels.com/photos/4958641/pexels-photo-4958641.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ff6",
+        "name": "Spicy Paneer Wrap",
+        "description": "Char-grilled paneer, mint chutney, and raw onions rolled in a flaky paratha.",
+        "price": 1440,
+        "image": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ff7",
+        "name": "Chicken Tikka Sandwich",
+        "description": "Shredded chicken tikka in tandoori mayo, served in grilled artisan sourdough.",
+        "price": 1520,
+        "image": "https://images.pexels.com/photos/1603901/pexels-photo-1603901.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ff8",
+        "name": "Artisanal Hot Dog",
+        "description": "Premium smoked bratwurst topped with spicy mustard and crispy fried onions.",
+        "price": 1280,
+        "image": "https://images.pexels.com/photos/4518843/pexels-photo-4518843.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ff9",
+        "name": "Classic Mac & Cheese",
+        "description": "Macaroni enveloped in a blend of gruyere, sharp cheddar, and parmesan cheeses.",
+        "price": 1760,
+        "image": "https://images.pexels.com/photos/2679501/pexels-photo-2679501.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "ff10",
+        "name": "Crispy Calamari Rings",
+        "description": "Semolina-dusted calamari, flash-fried and served with a zesty lemon-caper tartare.",
+        "price": 1680,
+        "image": "https://images.pexels.com/photos/4553027/pexels-photo-4553027.jpeg?auto=compress&cs=tinysrgb&w=600"
+      }
+    ]
+  },
+  {
+    "id": "cat_mains",
+    "name": "Classic Mains",
+    "items": [
+      {
+        "id": "m1",
+        "name": "Wagyu Beef Tenderloin",
+        "description": "Grade A5 Wagyu beef served with pomme purée and red wine jus.",
+        "price": 8800,
+        "image": "https://images.pexels.com/photos/3535383/pexels-photo-3535383.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "m2",
+        "name": "Pan-Seared Sea Bass",
+        "description": "Wild-caught sea bass with saffron beurre blanc and fennel citrus salad.",
+        "price": 3840,
+        "image": "https://images.pexels.com/photos/3763847/pexels-photo-3763847.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "m3",
+        "name": "Wild Mushroom Risotto",
+        "description": "Creamy Arborio rice with porcini, Parmigiano-Reggiano, and truffle oil.",
+        "price": 2720,
+        "image": "https://images.pexels.com/photos/6287525/pexels-photo-6287525.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "m6",
+        "name": "Penne Arrabbiata",
+        "description": "Penne pasta tossed in a robust and spicy tomato, garlic, and basil sauce.",
+        "price": 2080,
+        "image": "https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "m7",
+        "name": "Chicken Alfredo",
+        "description": "Fettuccine ribbon pasta enveloped in a rich parmesan and garlic cream sauce.",
+        "price": 2240,
+        "image": "https://images.pexels.com/photos/11220209/pexels-photo-11220209.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "m8",
+        "name": "Vegetable Lasagna",
+        "description": "Layers of fresh pasta baked with roasted vegetables, ricotta, and basil pesto.",
+        "price": 2000,
+        "image": "https://images.pexels.com/photos/5949893/pexels-photo-5949893.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "m9",
+        "name": "Black Cod Misoyaki",
+        "description": "Silky black cod marinated in sweet white miso and broiled to perfection.",
+        "price": 4160,
+        "image": "https://images.pexels.com/photos/3763847/pexels-photo-3763847.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "m10",
+        "name": "Eggplant Parmigiana",
+        "description": "Layers of crispy baked eggplant, rich pomodoro sauce, and melted mozzarella.",
+        "price": 2240,
+        "image": "https://images.pexels.com/photos/5949893/pexels-photo-5949893.jpeg?auto=compress&cs=tinysrgb&w=600"
+      }
+    ]
+  },
+  {
+    "id": "cat_desserts_beverages",
+    "name": "Desserts & Beverages",
+    "items": [
+      {
+        "id": "db1",
+        "name": "Gold Leaf Lava Cake",
+        "description": "Dark chocolate fondant with a molten center, topped with edible gold.",
+        "price": 1920,
+        "image": "https://images.pexels.com/photos/4110008/pexels-photo-4110008.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "db2",
+        "name": "Gulab Jamun with Rabri",
+        "description": "Golden milk dough dumplings soaked in rose syrup, set in rich thickened milk.",
+        "price": 1280,
+        "image": "https://images.pexels.com/photos/11220025/pexels-photo-11220025.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "db3",
+        "name": "Classic Tiramisu",
+        "description": "Espresso-soaked ladyfingers layered with mascarpone cream.",
+        "price": 1280,
+        "image": "https://images.pexels.com/photos/6880219/pexels-photo-6880219.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "db4",
+        "name": "Saffron Pistachio Kulfi",
+        "description": "Traditional Indian frozen dessert delicately infused with saffron.",
+        "price": 1120,
+        "image": "https://images.pexels.com/photos/5946069/pexels-photo-5946069.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "db5",
+        "name": "Virgin Mojito",
+        "description": "Refreshing muddled mint, lime juice, and sparkling soda.",
+        "price": 800,
+        "image": "https://images.pexels.com/photos/2109099/pexels-photo-2109099.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "db7",
+        "name": "Filter Coffee",
+        "description": "Authentic South Indian strong coffee decoction with frothed hot milk.",
+        "price": 640,
+        "image": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "db8",
+        "name": "Masala Chai",
+        "description": "Aromatic Indian tea brewed with ginger, cardamom, and cloves.",
+        "price": 640,
+        "image": "https://images.pexels.com/photos/5946631/pexels-photo-5946631.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "db9",
+        "name": "Lemon Iced Tea",
+        "description": "House-brewed Ceylon tea chilled and sweetened with fresh lemon.",
+        "price": 800,
+        "image": "https://images.pexels.com/photos/792613/pexels-photo-792613.jpeg?auto=compress&cs=tinysrgb&w=600"
+      },
+      {
+        "id": "db10",
+        "name": "Artisan Sparkling Water",
+        "description": "Crystal clear carbonated water imported from the French Alps.",
+        "price": 800,
+        "image": "https://images.pexels.com/photos/1000084/pexels-photo-1000084.jpeg?auto=compress&cs=tinysrgb&w=600"
+      }
+    ]
+  }
+]
