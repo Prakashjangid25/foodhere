@@ -608,37 +608,62 @@
 
   .admin-sidebar {
     width: 100%;
+    height: auto;
+    position: relative;
     padding: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-right: none;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .sidebar-brand {
-    margin-bottom: 0;
+    padding: 0;
+    border-bottom: none;
+    text-align: left;
   }
 
   .sidebar-nav {
     flex-direction: row;
+    padding: 0;
     gap: 10px;
   }
 
   .nav-btn {
     padding: 10px 15px;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+
+  .nav-btn:hover {
+    border-left-color: transparent;
+    border-bottom-color: rgba(207, 168, 88, 0.3);
+  }
+
+  .nav-btn.active {
+    border-left: none;
+    border-bottom: 3px solid var(--accent-gold);
   }
 }
 
 @media (max-width: 768px) {
   .admin-sidebar {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
+    padding: 20px 15px;
+  }
+
+  .sidebar-brand {
+    text-align: center;
   }
 
   .sidebar-nav {
     width: 100%;
+    justify-content: center;
     overflow-x: auto;
     padding-bottom: 5px;
   }
@@ -654,7 +679,8 @@
   .admin-topbar {
     flex-direction: column;
     gap: 15px;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 
   .orders-grid {
@@ -668,7 +694,8 @@
   .category-header {
     flex-direction: column;
     gap: 15px;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 
   .add-btn {
