@@ -597,3 +597,95 @@
   background: #c0392b;
   box-shadow: 0 4px 20px rgba(231, 76, 60, 0.35);
 }
+
+/* =============================================
+   MOBILE RESPONSIVENESS
+   ============================================= */
+@media (max-width: 900px) {
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .sidebar-brand {
+    margin-bottom: 0;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .nav-btn {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .sidebar-nav {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .nav-btn {
+    white-space: nowrap;
+  }
+
+  .admin-main {
+    padding: 20px 15px;
+  }
+
+  .admin-topbar {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .orders-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-items-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .add-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 25px 20px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .modal-actions button {
+    width: 100%;
+  }
+}
