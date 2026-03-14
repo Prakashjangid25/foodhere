@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   onMenuChange, onOrdersChange,
   updateMenuItem, addMenuItem, deleteMenuItem,
-  updateOrderStatus
+  updateOrderStatus, markOrderNotified
 } from '../firebase/firestore';
 import './AdminDashboard.css';
 
@@ -34,6 +34,39 @@ export default function AdminDashboard() {
       unsubOrders();
     };
   }, []);
+
+  // Request Notification Permission on mount
+  useEffect(() => {
+    if ('Notification' in window && Notification.permission !== 'granted' && Notification.permission !== 'denied') {
+      Notification.requestPermission();
+    }
+  }, []);
+
+  // Handle new incoming orders notification
+  useEffect(() => {
+    if (orders.length === 0) return;
+
+    const unnotifiedOrders = orders.filter(o => !o.adminNotified);
+    
+    if (unnotifiedOrders.length > 0) {
+      // Play Sound
+      const audio = new Audio('/notification.mp3');
+      audio.play().catch(e => console.error("Audio play failed (maybe no interaction yet):", e));
+
+      // Show Browser Notification
+      unnotifiedOrders.forEach(order => {
+        if ('Notification' in window && Notification.permission === 'granted') {
+          new Notification('New Room Service Order! 🛎️', {
+            body: `Room ${order.roomNumber} - ${order.guestName} (${order.items?.length || 0} items)`,
+            icon: '/favicon.png'
+          });
+        }
+        
+        // Mark as notified in DB so it doesn't alert again
+        markOrderNotified(order.id).catch(console.error);
+      });
+    }
+  }, [orders]);
 
   const handleUpdateStatus = (orderId, newStatus) => {
     updateOrderStatus(orderId, newStatus);
@@ -138,7 +171,7 @@ export default function AdminDashboard() {
               {orders.length === 0 && <p className="text-muted">No orders currently active.</p>}
               <div className="orders-grid">
                 {orders.map(order => (
-                  <div key={order.id} className={`order-card status-${order.status}`}>
+                  <div key={order.id} className={`order-card status-${order.status} ${!order.adminNotified ? 'new-order-alert' : ''}`}>
                     <div className="order-header">
                       <h3>Room {order.roomNumber}</h3>
                       <span className="order-status">{order.status}</span>

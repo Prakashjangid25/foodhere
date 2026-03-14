@@ -164,18 +164,27 @@
 }
 
 .order-card {
-  background: rgba(25, 25, 35, 0.7);
-  backdrop-filter: blur(10px);
+  background: rgba(25, 25, 35, 0.6);
   border-radius: 14px;
-  padding: 22px;
+  padding: 20px;
   border: 1px solid rgba(255,255,255,0.06);
-  border-left: 4px solid #555;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .order-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.new-order-alert {
+  animation: pulse-red 2s infinite;
+  border-color: rgba(231, 76, 60, 0.5);
+}
+
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(231, 76, 60, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
 }
 
 .order-card.status-received { border-left-color: #f39c12; }

@@ -62,7 +62,8 @@ export async function createOrder(orderData) {
   const order = {
     ...orderData,
     status: 'received',
-    createdAt: Date.now()
+    createdAt: Date.now(),
+    adminNotified: false
   };
   await set(orderRef, order);
   return { id: orderRef.key, ...order };
@@ -85,6 +86,10 @@ export function onOrdersChange(callback) {
 
 export async function updateOrderStatus(orderId, newStatus) {
   await update(ref(db, `orders/${orderId}`), { status: newStatus });
+}
+
+export async function markOrderNotified(orderId) {
+  await update(ref(db, `orders/${orderId}`), { adminNotified: true });
 }
 
 // ========= SEED MENU DATA =========
