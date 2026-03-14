@@ -35,34 +35,48 @@ export default function AdminDashboard() {
     };
   }, []);
 
-  // Request Notification Permission on mount
+  // Request Notification Permission on mount safely
   useEffect(() => {
-    if ('Notification' in window && Notification.permission !== 'granted' && Notification.permission !== 'denied') {
-      Notification.requestPermission();
+    try {
+      if (typeof window !== 'undefined' && 'Notification' in window) {
+        if (Notification.permission !== 'granted' && Notification.permission !== 'denied') {
+          Notification.requestPermission().catch(e => console.warn("Notification permission error:", e));
+        }
+      }
+    } catch (e) {
+      console.warn("Notification API not supported on this browser/device.");
     }
   }, []);
 
-  // Handle new incoming orders notification
+  // Handle new incoming orders notification safely
   useEffect(() => {
     if (orders.length === 0) return;
 
     const unnotifiedOrders = orders.filter(o => !o.adminNotified);
     
     if (unnotifiedOrders.length > 0) {
-      // Play Sound
-      const audio = new Audio('/notification.mp3');
-      audio.play().catch(e => console.error("Audio play failed (maybe no interaction yet):", e));
+      // 1. Play Sound (Defensively)
+      try {
+        const audio = new Audio('/notification.mp3');
+        audio.play().catch(e => console.warn("Audio play blocked (needs user interaction first):", e));
+      } catch (e) {
+        console.warn("Audio API failed:", e);
+      }
 
-      // Show Browser Notification
+      // 2. Show Browser Notification & Mark as Notified
       unnotifiedOrders.forEach(order => {
-        if ('Notification' in window && Notification.permission === 'granted') {
-          new Notification('New Room Service Order! 🛎️', {
-            body: `Room ${order.roomNumber} - ${order.guestName} (${order.items?.length || 0} items)`,
-            icon: '/favicon.png'
-          });
+        try {
+          if (typeof window !== 'undefined' && 'Notification' in window && Notification.permission === 'granted') {
+            new Notification('New Room Service Order! 🛎️', {
+              body: `Room ${order.roomNumber} - ${order.guestName} (${order.items?.length || 0} items)`,
+              icon: '/favicon.png'
+            });
+          }
+        } catch (e) {
+          console.warn("Notification creation failed:", e);
         }
         
-        // Mark as notified in DB so it doesn't alert again
+        // Always mark as notified in DB so it doesn't alert again, even if audio/notification failed
         markOrderNotified(order.id).catch(console.error);
       });
     }
